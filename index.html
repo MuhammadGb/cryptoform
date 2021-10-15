@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FORM</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+      .main {
+          background-color: black;
+          display: flex;
+          height: 50em;
+          padding-top: 8em;
+          padding-left: 5em;
+      }
+      form{
+          background-color: whitesmoke;
+          height: 25em;
+          padding: 3em;
+          padding-top: 1em;
+          border-radius: 1em;
+      }
+      hr{
+          margin-bottom: 2em;
+      }
+      input{
+          height: 4em;
+          width: 20em;
+          margin-bottom: 0.2em;
+          margin-top: 0.5em;
+          border-radius: 0.5em;
+          padding-left: 1em;
+      }
+      select{
+          height: 4em;
+          width: 8em;
+          margin-bottom: 0.2em;
+          margin-top: 0.5em;
+          border-radius: 0.5em;
+          padding-left: 0.5em;
+      }
+      #country{
+          width: 29em;
+      }
+      #submit{
+          width: 29em;
+          margin-top: 3em;
+          background-color: lightgreen;
+      }
+      p{
+          text-align: center;
+          font-size: 2em;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+      }
+  </style>
+  <body onload="myFunction()">
+      <div class="main">
+        <form>
+            <p>Buy</p>
+            <hr/>
+            <input type="number" id="currencyvalue" placeholder="You send" name="fname">
+            <select name="cars" id="currency">
+                <option value="volvo">USD</option>
+                <option value="saab">EURO</option>
+            </select>
+            <br>
+            <input type="number" id="cryptovalue"  placeholder="You get approximately" id="lname" name="lname">
+            <select name="cars" id="crypto">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="BTC">HEX</option>
+                <option value="ETH">BNB</option>
+                <option value="BTC">USDT</option>
+            </select>
+            <br>
+            <select name="cars" placeholder="Country of residence" id="country">
+                <option value="volvo">Nigeria</option>
+                <option value="saab">Rwanda</option>
+            </select>
+            <br>
+            <input type="submit" id="submit" value="Submit">
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+	<script>
+        function myFunction() {
+            const arr = [59,276.21, 3,767.87, 459.91, 2.15, 1.00]
+            arr.forEach((a, i) => a)
+        }
+        myFunction()
+        let currncyval = document.getElementById("currencyvalue") 
+        let currncyvalue = document.getElementById("currencyvalue").value
+        currncyval.addEventListener("change", function(){
+            let currncyvalue = document.getElementById("cryptovalue").value = document.getElementById("currencyvalue").value/59276.21
+        })
+    </script>
+  </body>
+</html>
